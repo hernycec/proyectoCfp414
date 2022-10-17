@@ -17,7 +17,7 @@
         
             <%
                 Class.forName("com.mysql.jdbc.Driver");
-                String consulta1 = "SELECT * FROM nombres";
+                String consulta1 = "SELECT * FROM nombres WHERE curso = ?";
                 Connection conexion = null;
                 PreparedStatement consultaEjercicio = null;
                 try {

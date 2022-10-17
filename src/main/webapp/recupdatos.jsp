@@ -27,8 +27,15 @@
                 
             
                 while(listaEjercicio.next()){
-                    out.print("<p style = 'color: blue'>" + listaEjercicio.getString("nom")+ "</p></br>");
+                    String color = "blue";
+                    int edad = Integer.parseInt(listaEjercicio.getString("edad"));
+                    if(edad >= 30){
+                    color = "red";
+                    }
+                    out.print("<p style = 'color: " + color + "'>" + listaEjercicio.getString("nom")+ "</p></br>");
                 }
+                
+                
                 
                     
                 } catch (Exception e) {
